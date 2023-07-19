@@ -1,0 +1,98 @@
+:root {
+  --color-main-text: hsl(203, 39%, 44%);
+  --color-o: hsl(215, 50%, 23%);
+  --color-secondary: hsl(182, 43%, 76%);
+  --color-shadow: hsl(203, 29%, 74%);
+  --color-tile-background: hsl(105, 55%, 96%);
+  --color-x: hsl(355, 78%, 56%);
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 85dvh;
+}
+
+.row {
+  display: flex;
+}
+
+.tile {
+  background-color: var(--color-tile-background);
+  border-color: var(--color-secondary);
+  border-radius: 10%;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 10px 10px 5px -4px var(--color-shadow);
+  -moz-box-shadow: 10px 10px 5px -4px var(--color-shadow);
+  -webkit-box-shadow: 10px 10px 5px -4px var(--color-shadow);
+  cursor: pointer;
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 16px;
+  min-height: 6rem;
+  min-width: 6rem;
+  outline: var(--color-secondary);
+  text-align: center;
+  user-select: none;
+}
+
+.tile--x {
+  color: var(--color-x);
+}
+
+.tile--o {
+  color: var(--color-o);
+}
+
+.game-over-alert {
+  color: var(--color-main-text);
+  font-size: large;
+  font-weight: bold;
+  height: 36px;
+  padding: 0;
+  text-align: center;
+  user-select: none;
+}
+
+.winner-alert {
+  color: var(--color-main-text);
+  font-size: large;
+  font-weight: bold;
+  height: 36px;
+  padding: 0;
+  text-align: center;
+  user-select: none;
+}
+
+.new-game {
+  background-color: var(--color-tile-background);
+  border-color: var(--color-secondary);
+  border-style: solid;
+  color: var(--color-main-text);
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+  padding: 12px;
+  text-align: center;
+}
+
+.new-game--hidden {
+  visibility: hidden;
+}
+
+.new-game:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-main-text);
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
